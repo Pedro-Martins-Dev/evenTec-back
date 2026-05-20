@@ -1,6 +1,5 @@
-package com.evenTec.api.address;
+package com.evenTec.api.domain;
 
-import com.evenTec.api.domain.Event;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -13,7 +12,7 @@ import java.util.UUID;
 @Table(name = "adress")
 @Entity
 
-public class Address {
+public class AddressDomain {
 	@Id
 	@GeneratedValue
 	private UUID id;
@@ -23,5 +22,5 @@ public class Address {
 
 	@ManyToOne
 	@JoinColumn(name = "event_id")
-	private Event event;
+	private EventDomain eventDomain;
 }

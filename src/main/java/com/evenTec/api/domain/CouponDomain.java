@@ -4,7 +4,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -21,7 +20,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Coupon {
+public class CouponDomain {
 	@Id
 	@GeneratedValue
 	private UUID id;
@@ -31,5 +30,5 @@ public class Coupon {
 
 	@ManyToOne
 	@JoinColumn(name = "event_id")
-	private Event event;
+	private EventDomain eventDomain;
 }
